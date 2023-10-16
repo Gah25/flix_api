@@ -11,6 +11,11 @@ class Movie(models.Model):
         on_delete=models.PROTECT,
         related_name='movies'
     )
+    # genres = models.ManyToManyField(
+    #     Genre,
+    #     related_name='additional_movies',
+    #     blank=True
+    # )
     release_date = models.DateField(null=True, blank=True)
     actors = models.ManyToManyField(Actor, related_name='movies')
     resume = models.TextField(null=True, blank=True)
