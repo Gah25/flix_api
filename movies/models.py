@@ -3,11 +3,10 @@ from actors.models import Actor
 from genres.models import Genre
 
 
-
 class Movie(models.Model):
     title = models.CharField(max_length=500)
     genre = models.ForeignKey(
-        Genre, 
+        Genre,
         on_delete=models.PROTECT,
         related_name='movies'
     )
